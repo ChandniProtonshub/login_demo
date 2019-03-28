@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(aa.jpg); height: 50; width: 50; background-repeat; ">
+<%= form_tag(users_users_login_path, :method => "post") do %>
+
+	<center>
+		<h1>Login Form</h1>
+		<table>
+
+			<p>
+			   <%= label_tag :email%><br>
+			   <%= text_field_tag :email%>
+			</p>
+			<p>
+				<%= label_tag :encrypted_password, 'Password'%><br>
+				<%= password_field_tag :encrypted_password  %>
+			</p>
+			<p>
+				<%= submit_tag "Login" %> 
+				<h5>No account yet? <%= link_to 'Create an account', users_signup_path %></h5>
+			</p>
+		</table>
+      <% end %> 
+    </center>
+	</html>
